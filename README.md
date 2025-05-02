@@ -4,17 +4,17 @@ A responsive and fully functional e-commerce frontend built with **React.js**, *
 
 ##  Live Demo
 
-[ View Live Site]()  
+[ View Live Site](https://arizon-ekart.vercel.app/)  
 
 ---
 
 ##  Screenshots
 
 ###  Desktop View
-![Desktop View](screenshots/desktop-view.png)
+![Desktop View](/desktop-view.png)
 
 ###  Mobile View
-![Mobile View](screenshots/mobile-view.png)
+![Mobile View](/mobile-view.png)
 
 ---
 
@@ -26,6 +26,8 @@ A responsive and fully functional e-commerce frontend built with **React.js**, *
 -  Responsive design for mobile, tablet, and desktop
 -  Context API with `useReducer` for state management
 -  Clean UI using Tailwind CSS
+-  Search Products
+-  
 
 ---
 
@@ -44,7 +46,7 @@ A responsive and fully functional e-commerce frontend built with **React.js**, *
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/.git
+git clone https://github.com/PAVVDPRASAD/E-kart-application
 cd arizon-ecommerce
 npm i 
 npm run start

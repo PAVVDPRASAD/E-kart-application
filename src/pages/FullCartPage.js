@@ -110,7 +110,7 @@ const FullCartPage = () => {
                     <PaymentPopUp />
                     <button
                       onClick={close}
-                      className="mt-6 bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
+                      className="mt-6 bg-red-300 px-4 py-2 rounded hover:bg-red-600"
                     >
                       Close
                     </button>

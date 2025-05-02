@@ -15,8 +15,12 @@ const PaymentPopup = () => {
   );
 
   const handleConfirmBtn = () => {
-    dispatch({ type: "CLEAR_CART" });
     setOrderPlaced(true);
+
+    setTimeout(() => {
+      dispatch({ type: "CLEAR_CART" });
+    }, 2000); // Reset after 2 seconds
+    
   };
 
   return (
@@ -26,7 +30,7 @@ const PaymentPopup = () => {
       {orderPlaced ? (
         <div className="text-center">
           <p className="text-lg font-semibold text-green-600">
-            🎉 Your order has been placed successfully!
+             Your order has been placed successfully!
           </p>
         </div>
       ) : (
@@ -49,13 +53,13 @@ const PaymentPopup = () => {
 
           <div className="w-full text-left mb-6">
             <p className="font-medium">Order Details:</p>
-            <p>🛒 Quantity: <span className="font-semibold">{quantity}</span></p>
-            <p>💰 Total Price: <span className="font-bold text-blue-600">₹{subtotal}/-</span></p>
+            <p>Quantity: <span className="font-semibold">{quantity}</span></p>
+            <p>Total Price: <span className="font-bold text-blue-600">₹{subtotal}/-</span></p>
           </div>
 
           <button
             onClick={handleConfirmBtn}
-            className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition"
+            className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition duration-200"
           >
             Confirm Order
           </button>
