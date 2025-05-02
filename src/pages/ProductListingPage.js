@@ -45,7 +45,7 @@ const ProductListingPage = () => {
     <div>
       <Header />
       <div className="flex flex-row justify-around items-center w-full bg-gray-200 h-16 shadow-md">
-        <h1 className="text-xl font-semibold">Product Listing</h1>
+        <h1 className="text-sm lg:text-2xl font-semibold p-2">Product Listing</h1>
         <input
           type="text"
           placeholder="Search products..."

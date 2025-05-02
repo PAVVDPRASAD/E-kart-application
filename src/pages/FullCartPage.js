@@ -106,7 +106,8 @@ const FullCartPage = () => {
                 closeOnDocumentClick
               >
                 {(close) => (
-                  <div className="opacity-100 bg-white p-6 rounded-lg shadow-md w-full max-w-md mx-auto">
+                  <div className="opacity-100 bg-white p-6 rounded-lg shadow-md w-[300px] md:w-[400px] lg:w-full mx-auto">
+                    <h2 className="text-lg font-bold mb-4">Payment</h2>
                     <PaymentPopUp />
                     <button
                       onClick={close}

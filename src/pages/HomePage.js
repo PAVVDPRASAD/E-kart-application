@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import {Typewriter} from 'react-simple-typewriter'
+import {motion} from "framer-motion";
 
 const HomePage = () => {
   return (
@@ -24,12 +25,24 @@ const HomePage = () => {
                     />
             </span>
           </h1>
-          <p className="text-lg ">Discover the best products at unbeatable prices. Quality meets affordability for your perfect shopping experience.</p>
+          <motion.p className="text-lg "
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Discover the best products at unbeatable prices. Quality meets affordability for your perfect shopping experience.</motion.p>
           <Link to="/products" className="mt-8 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
             Shop Now 
           </Link>
         </div>
-        <img src="https://img.lovepik.com/free-png/20211108/lovepik-men-and-women-are-shopping-in-the-mall-png-image_400526633_wh1200.png" alt="website-image" className="w-[250px] lg:w-[300px] rounded-lg mx-auto mt-4" />
+        <motion.img src="https://img.lovepik.com/free-png/20211108/lovepik-men-and-women-are-shopping-in-the-mall-png-image_400526633_wh1200.png" 
+        alt="website-image" 
+        className="w-[250px] lg:w-[300px] rounded-lg mx-auto mt-4" 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        whileHover={{ scale: 1.05 }}
+        />
       </section>
       <Footer />
     </div>

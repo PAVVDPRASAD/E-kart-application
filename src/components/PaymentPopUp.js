@@ -34,7 +34,7 @@ const PaymentPopup = () => {
           </p>
         </div>
       ) : (
-        <>
+        <div className="w-full max-w-md mx-auto">
           <p className="font-semibold text-lg mb-4">Payment Methods</p>
           <div className="grid grid-cols-1 gap-2 mb-6">
             {["Card", "Net Banking", "UPI", "Wallet", "Cash On Delivery"].map((method, index) => (
@@ -63,7 +63,7 @@ const PaymentPopup = () => {
           >
             Confirm Order
           </button>
-        </>
+        </div>
       )}
     </div>
   );
