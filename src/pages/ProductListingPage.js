@@ -24,18 +24,41 @@ const ProductListingPage = () => {
     );
     setProducts(filteredProducts);
   }
-  console.log(products);
+
+  const handleFilter = (e) => {
+    const filtervalue = e.target.value.toLowerCase();
+    if (filtervalue === "all") {
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((data) => {
+          setProducts(data);
+        });
+    } else {
+      const filteredProducts = products.filter((product) =>
+        product.category === filtervalue
+      );
+      setProducts(filteredProducts);
+    }
+  }
 
   return (
     <div>
       <Header />
-      <input
-        type="text"
-        placeholder="Search products..."
-        className="border p-2 rounded w-full max-w-md mx-4 my-4 mlg-4 border-gray-300 shadow-lg focus:outline-none focus:ring-1 focus:ring-blue-400"
-        onChange={(e) => { handleSearch(e) }
-      }
-      />
+      <div className="flex flex-row justify-around items-center w-full bg-gray-200 h-16 shadow-md">
+        <h1 className="text-xl font-semibold">Product Listing</h1>
+        <input
+          type="text"
+          placeholder="Search products..."
+          className="border p-2 rounded w-full max-w-md mx-4 my-4 mlg-4 border-gray-300 shadow-lg focus:outline-none focus:ring-1 focus:ring-blue-400"
+          onChange={handleSearch}
+        />
+        <select className="border p-2 rounded w-[150px] max-w-md mx-4 my-4  border-gray-300 shadow-lg focus:outline-none focus:ring-1 focus:ring-blue-400" 
+        onChange={(e) => {handleFilter(e)}}>
+          <option value="All">All</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Jewelery">Jewelery</option>    
+        </select>
+      </div>
       <div>
         {loading ? (
           <div className="flex flex-row justify-center items-center w-full">

@@ -27,7 +27,7 @@ A responsive and fully functional e-commerce frontend built with **React.js**, *
 -  Context API with `useReducer` for state management
 -  Clean UI using Tailwind CSS
 -  Search Products
--  
+-  Filter Products
 
 ---
 
@@ -48,5 +48,5 @@ A responsive and fully functional e-commerce frontend built with **React.js**, *
 ```bash
 git clone https://github.com/PAVVDPRASAD/E-kart-application
 cd arizon-ecommerce
-npm i 
-npm run start
+npm i
+npm run start or npm start
